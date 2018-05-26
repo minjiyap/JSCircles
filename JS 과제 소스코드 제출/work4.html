@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+#form {
+	border : 3px solid;
+	width: 500px;
+	height: 500px;
+	text-align: center;
+	margin-left: 38%;
+	margin-top: 10%;
+	background-color: black;
+	color:white;
+}
+#form > input {
+	width: 200px;
+	height: 40px;
+	margin-top: 5px;
+	text-align: center;
+	border:2px solid;
+}
+button {
+	margin-top: 5px;
+	width: 200px;
+	height: 40px;
+	background-color: black;
+	color: white;
+	font-size: 25px;
+	border: 1px solid white;
+}
+</style>
+<body>
+	<form id="form">
+		<h1>회원가입</h1>
+		<hr>
+		<input type="text" placeholder="ID" style="margin-top: 80px;" /><br>
+		<input type="password" placeholder="PASSWORD" id="password"/><br>
+		<input type="password" placeholder="PASSWORDCHECK" id="passwordch" /><br>
+		<input type="text" placeholder="NICKNAME"  /><br>
+		<button onclick="check();">회원 가입</button>
+	</form>
+
+	<script type="text/javascript">
+		function check(){
+
+
+			var pw = document.getElementById("password").value; 
+			var pwch = document.getElementById("passwordch").value; 
+			if(pw!==pwch) {
+				alert("비밀번호 같지 않음");
+			}
+			else {
+				alert("확인 완료");
+			}
+
+		}
+
+
+	</script>
+
+</body>
+</html>
